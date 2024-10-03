@@ -12,3 +12,10 @@ bool cekJawaban(int tebakan, int angkaAsli) {
     if (tebakan == angkaAsli) {
         cout << "Selamat, Anda benar!" << endl;
         return true;
+    } else if (tebakan < angkaAsli) {
+        cout << "Terlalu kecil!" << endl;
+    } else {
+        cout << "Terlalu besar!" << endl;
+    }
+    return false;
+}
