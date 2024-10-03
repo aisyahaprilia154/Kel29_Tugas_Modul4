@@ -19,3 +19,20 @@ bool cekJawaban(int tebakan, int angkaAsli) {
     }
     return false;
 }
+void mulaiPermainan() {
+    cout << "Selamat datang di permainan tebak angka!" << endl;
+    cout << "Tebak angka antara 1 sampai 100." << endl;
+
+    int angkaAsli = generateAngkaRandom();
+    int tebakan;
+
+    do {
+        cout << "Masukkan tebakan Anda: ";
+        cin >> tebakan;
+    } while (!cekJawaban(tebakan, angkaAsli));
+}
+
+int main() {
+    mulaiPermainan();
+    return 0;
+}
